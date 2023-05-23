@@ -1,0 +1,19 @@
+[package]
+name = "axum-tracker"
+version = "0.1.0"
+edition = "2021"
+
+
+[lib]
+path = "src/lib.rs"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.71"
+axum = { version = "0.6.18", features = ["tracing", "headers"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.68"
+tokio = { version = "1.0", features = ["full"] }
+tower-http = { version = "0.4.0", features = ["trace"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
